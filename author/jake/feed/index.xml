@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>jake &#8211; Qubit.Study</title>
+	<atom:link href="/author/jake/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description></description>
+	<lastBuildDate>Tue, 23 Apr 2024 05:36:44 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.5.2</generator>
+
+<image>
+	<url>/wp-content/uploads/2024/04/dallc2b7e-2024-04-23-00.11.02-a-colorful-abstract-quantum-inspired-image-suitable-for-background-use.-the-image-features-a-soft-gradient-of-vibrant-colors-in-a-simple-non-complic-150x150.jpg</url>
+	<title>jake &#8211; Qubit.Study</title>
+	<link>/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Hello world!</title>
+		<link>/hello-world/</link>
+					<comments>/hello-world/#comments</comments>
+		
+		<dc:creator><![CDATA[jake]]></dc:creator>
+		<pubDate>Tue, 23 Apr 2024 05:36:44 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">/?p=1</guid>
+
+					<description><![CDATA[Welcome to WordPress. This is your first post. Edit or delete it, then start writing!]]></description>
+										<content:encoded><![CDATA[
+<p>Welcome to WordPress. This is your first post. Edit or delete it, then start writing!</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/hello-world/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Hello World!</title>
+		<link>/hello-world-2/</link>
+					<comments>/hello-world-2/#respond</comments>
+		
+		<dc:creator><![CDATA[jake]]></dc:creator>
+		<pubDate>Tue, 23 Apr 2024 03:09:25 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://qubitstudy.wordpress.com/2024/04/23/hello-world/</guid>
+
+					<description><![CDATA[Welcome to WordPress! This is your first post. Edit or delete it to take the first step in your blogging journey.]]></description>
+										<content:encoded><![CDATA[
+<p>Welcome to WordPress! This is your first post. Edit or delete it to take the first step in your blogging journey.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/hello-world-2/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>
