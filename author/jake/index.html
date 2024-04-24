@@ -112,6 +112,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 			width: auto;
 			z-index: 100000;
 		}</style>
+<link rel="stylesheet" id="katex-css" href="/wp-content/plugins/katex/assets/katex-0.13.13/katex.min.css?ver=6.5.2" media="all">
 <link rel="https://api.w.org/" href="/wp-json/">
 <link rel="alternate" type="application/json" href="/wp-json/wp/v2/users/1">
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
@@ -156,6 +157,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 								<ul class="wp-block-navigation__container is-responsive items-justified-right wp-block-navigation">
 <li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="/about/"><span class="wp-block-navigation-item__label">About Me</span></a></li>
 <li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="/CV"><span class="wp-block-navigation-item__label">CV</span></a></li>
+<li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="/publications/"><span class="wp-block-navigation-item__label">Highlighted Publications</span></a></li>
 </ul>
 							</div>
 						</div>
@@ -291,7 +293,56 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 
 <footer class="wp-block-template-part"></footer>
 </div>
-<script id="wp-block-template-skip-link-js-after">( function() {
+        <script>
+            function _katexRender(rootElement) {
+                const eles = rootElement.querySelectorAll(".katex-eq:not(.katex-rendered)");
+                for(let idx=0; idx < eles.length; idx++) {
+                    const ele = eles[idx];
+                    ele.classList.add("katex-rendered");
+                    try {
+                        katex.render(
+                            ele.textContent,
+                            ele,
+                            {
+                                displayMode: ele.getAttribute("data-katex-display") === 'true',
+                                throwOnError: false
+                            }
+                        );
+                    } catch(n) {
+                        ele.style.color="red";
+                        ele.textContent = n.message;
+                    }
+                }
+            }
+
+            function katexRender() {
+                _katexRender(document);
+            }
+
+            document.addEventListener("DOMContentLoaded", function() {
+                katexRender();
+
+                // Perform a KaTeX rendering step when the DOM is mutated.
+                const katexObserver = new MutationObserver(function(mutations) {
+                    [].forEach.call(mutations, function(mutation) {
+                        if (mutation.target && mutation.target instanceof Element) {
+                            _katexRender(mutation.target);
+                        }
+                    });
+                });
+
+                const katexObservationConfig = {
+                    subtree: true,
+                    childList: true,
+                    attributes: true,
+                    characterData: true
+                };
+
+                katexObserver.observe(document.body, katexObservationConfig);
+            });
+
+        </script>
+        <script id="wp-block-template-skip-link-js-after">( function() {
 		var skipLinkTarget = document.querySelector( 'main' ),
 			sibling,
 			skipLinkTargetID,
@@ -329,5 +380,6 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 		// Inject the skip link.
 		sibling.parentElement.insertBefore( skipLink, sibling );
 	}() );</script>
+<script src="/wp-content/plugins/katex/assets/katex-0.13.13/katex.min.js?ver=6.5.2" id="katex-js"></script>
 </body>
 </html>
